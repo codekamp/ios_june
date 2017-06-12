@@ -37,6 +37,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("cell clicked: \(indexPath.row)")
+        
+        let cell = tableView.cellForRow(at: indexPath)
+        
+        cell?.backgroundColor = UIColor.cyan
+        cell?.isSelected = false
     }
     
     override func didReceiveMemoryWarning() {
