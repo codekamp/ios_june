@@ -2,4 +2,99 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TableViewDemo/ViewController.swift"
+            timestampString = "519035249.779849"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TableViewDemo.ViewController.__deallocating_deinit"
+                  moduleName = "TableViewDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cerebro/code/ios_june/TableViewDemo/TableViewDemo/ViewController.swift"
+                  timestampString = "519035250.518253"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TableViewDemo.ViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; TableViewDemo.ViewController"
+                  moduleName = "TableViewDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cerebro/code/ios_june/TableViewDemo/TableViewDemo/ViewController.swift"
+                  timestampString = "519035250.521424"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "70">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TableViewDemo.ViewController.__allocating_init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; TableViewDemo.ViewController"
+                  moduleName = "TableViewDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cerebro/code/ios_june/TableViewDemo/TableViewDemo/ViewController.swift"
+                  timestampString = "519035250.522852"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TableViewDemo.ViewController.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;TableViewDemo.ViewController&gt;"
+                  moduleName = "TableViewDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cerebro/code/ios_june/TableViewDemo/TableViewDemo/ViewController.swift"
+                  timestampString = "519035250.524095"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TableViewDemo.ViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;TableViewDemo.ViewController&gt;"
+                  moduleName = "TableViewDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cerebro/code/ios_june/TableViewDemo/TableViewDemo/ViewController.swift"
+                  timestampString = "519035250.525676"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -17,37 +17,30 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         
         myTableView.dataSource = self
-        myTableView.delegate = self
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 150;
+        return 30;
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "my_cell_identifier")!
         
-        cell.textLabel?.text = "\(101 + indexPath.row)"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "my_cell_identifier") as! FriendProfileCell
         
-        print("called for row \(indexPath.row)")
+        cell.nameLabel.text = "friend \(indexPath.row)"
+        
+        let remainder = indexPath.row % 3
+        
+        if remainder == 0 {
+            cell.profileImageView.image = UIImage(named: "Ubuntu")
+        } else if remainder == 1 {
+            cell.profileImageView.image = UIImage(named: "Windows")
+        } else {
+            cell.profileImageView.image = UIImage(named: "Mac")
+        }
         
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("cell clicked: \(indexPath.row)")
-        
-        let cell = tableView.cellForRow(at: indexPath)
-        
-        cell?.backgroundColor = UIColor.cyan
-        cell?.isSelected = false
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
