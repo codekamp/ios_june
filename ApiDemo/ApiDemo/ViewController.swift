@@ -14,42 +14,84 @@ import SwiftyJSON
 class ViewController: UIViewController {
     
     var listNames:[String] = []
+    var listIds:[String] = []
     
-
-
+    var b = 0;
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let data: Parameters = ["apikey": "7c08f64b6028ffdc25f95cfc0c52d3e1-us11"]
         
-        Alamofire.request("https://us11.api.mailchimp.com/3.0/lists", method:.get, parameters:data).responseJSON { response in
-            
-            
-            let json = JSON(response.result.value)
-            
-            let itemCount = json["total_items"].intValue
-            
-            print ("total items are \(itemCount)")
         
+        
+        someFunc(a: 10)
+        someFunc(a: 20)
+        
+        something(firstNum: 10, callback: {
+            data in
             
-            let lists = json["lists"].arrayValue
+            print(data)
+        })
+        
+        something(firstNum: 10) {
+            data in
             
-            for list in lists {
-                self.listNames.append(list["name"].string!)
-            }
+            print(data)
+        }
+
+    }
+    
+    
+    func someFunc(a: Int) {
+        
+        b = a + 1
+        
+        print("value of b is \(b)")
+        
+        let myRequest = Alamofire.request("https://us11.api.mailchimp.com/3.0/lists")
+        
+        myRequest.responseJSON(completionHandler: {
+            response in
             
-            //reload tableview here
+            
+        })
+        
+        print("hello world")
+        
+        Alamofire.request("https://us11.api.mailchimp.com/3.0/lists").responseJSON {
+            response in
+            
+            
+        }
+    }
+    
+    
+    func handleResponse(response:DataResponse<Any>) {
+        print("Value of b in function \(b)")
+        
+        
+//        dismiss(animated: true, completion: nil)
+//        navigationController?.popViewController(animated: true)
+        
+        if let nc = navigationController {
+            nc.popViewController(animated: true)
+        } else {
+            dismiss(animated: true, completion: nil)
         }
         
+        if navigationController != nil {
+            navigationController!.popViewController(animated: true)
+        } else {
+           dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    func something(firstNum:Int, callback:(String) -> Void) -> Bool {
         
-        print("hello world!")
+        
+        return true
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
