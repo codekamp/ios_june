@@ -24,23 +24,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         
+        let headers:HTTPHeaders = ["Authorization": "bearer 4c10095cb9234e7915106c0612bceec7-us11"];
         
+        let data:Parameters = ["email_address": "amit@gmail.com", "status":"subscribed"]
         
-        someFunc(a: 10)
-        someFunc(a: 20)
-        
-        something(firstNum: 10, callback: {
-            data in
+        Alamofire.request("https://us11.api.mailchimp.com/3.0/lists/085c2bcf83/members", method:.post, parameters:data,encoding:JSONEncoding.default, headers: headers).responseJSON { (data) in
             
-            print(data)
-        })
-        
-        something(firstNum: 10) {
-            data in
-            
-            print(data)
+            print(data.result.value)
         }
-
+        
     }
     
     
@@ -72,8 +64,8 @@ class ViewController: UIViewController {
         print("Value of b in function \(b)")
         
         
-//        dismiss(animated: true, completion: nil)
-//        navigationController?.popViewController(animated: true)
+        //        dismiss(animated: true, completion: nil)
+        //        navigationController?.popViewController(animated: true)
         
         if let nc = navigationController {
             nc.popViewController(animated: true)
@@ -84,7 +76,7 @@ class ViewController: UIViewController {
         if navigationController != nil {
             navigationController!.popViewController(animated: true)
         } else {
-           dismiss(animated: true, completion: nil)
+            dismiss(animated: true, completion: nil)
         }
     }
     
