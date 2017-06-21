@@ -11,79 +11,44 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class ViewController: UIViewController {
-    
-    var listNames:[String] = []
-    var listIds:[String] = []
-    
-    var b = 0;
+class ViewController: UIViewController, UITableViewDataSource {
     
     
+    @IBOutlet weak var tableView: UITableView!
+    
+    var lists:[MailChimpList] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.dataSource = self
         
-        let headers:HTTPHeaders = ["Authorization": "bearer 4c10095cb9234e7915106c0612bceec7-us11"];
-        
-        let data:Parameters = ["email_address": "amit@gmail.com", "status":"subscribed"]
-        
-        Alamofire.request("https://us11.api.mailchimp.com/3.0/lists/085c2bcf83/members", method:.post, parameters:data,encoding:JSONEncoding.default, headers: headers).responseJSON { (data) in
+        MailChimpService.getLists {
+            (lists) in
             
-            print(data.result.value)
+            self.lists = lists
+            
+            self.tableView.reloadData()
+        }
+        
+        MailChimpService.getMembers(listId: "") { (members) in
+            print(members[0].)
         }
         
     }
     
-    
-    func someFunc(a: Int) {
-        
-        b = a + 1
-        
-        print("value of b is \(b)")
-        
-        let myRequest = Alamofire.request("https://us11.api.mailchimp.com/3.0/lists")
-        
-        myRequest.responseJSON(completionHandler: {
-            response in
-            
-            
-        })
-        
-        print("hello world")
-        
-        Alamofire.request("https://us11.api.mailchimp.com/3.0/lists").responseJSON {
-            response in
-            
-            
-        }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return lists.count
     }
     
-    
-    func handleResponse(response:DataResponse<Any>) {
-        print("Value of b in function \(b)")
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let list = lists[indexPath.row]
         
+        let cell = tableView.dequeueReusableCell(withIdentifier: "codekamp_cell")!
         
-        //        dismiss(animated: true, completion: nil)
-        //        navigationController?.popViewController(animated: true)
+        cell.textLabel?.text = list.name
         
-        if let nc = navigationController {
-            nc.popViewController(animated: true)
-        } else {
-            dismiss(animated: true, completion: nil)
-        }
-        
-        if navigationController != nil {
-            navigationController!.popViewController(animated: true)
-        } else {
-            dismiss(animated: true, completion: nil)
-        }
-    }
-    
-    func something(firstNum:Int, callback:(String) -> Void) -> Bool {
-        
-        
-        return true
+        return cell
     }
 }
 
