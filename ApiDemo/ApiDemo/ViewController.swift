@@ -31,10 +31,9 @@ class ViewController: UIViewController, UITableViewDataSource {
             self.tableView.reloadData()
         }
         
-        MailChimpService.getMembers(listId: "") { (members) in
-            print(members[0].)
-        }
+        NotificationCenter.default.addObserver(self, selector: #selector(onListFetched), name: NSNotification.Name("LIST_FETCHED"), object: nil)
         
+        NotificationCenter.default.removeObserver(self)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,6 +48,10 @@ class ViewController: UIViewController, UITableViewDataSource {
         cell.textLabel?.text = list.name
         
         return cell
+    }
+    
+    func onListFetched() {
+        print("onListFetched call hua")
     }
 }
 
