@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		750BC1F81F03AEC3007E0C38 /* UIViewController+CodeKamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750BC1F71F03AEC3007E0C38 /* UIViewController+CodeKamp.swift */; };
 		7563A4891F0253B500FB6EBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7563A4881F0253B500FB6EBB /* AppDelegate.swift */; };
 		7563A48B1F0253B500FB6EBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7563A48A1F0253B500FB6EBB /* ViewController.swift */; };
 		7563A48E1F0253B500FB6EBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7563A48C1F0253B500FB6EBB /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		750BC1F71F03AEC3007E0C38 /* UIViewController+CodeKamp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+CodeKamp.swift"; sourceTree = "<group>"; };
 		7563A4851F0253B500FB6EBB /* CoreDataTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7563A4881F0253B500FB6EBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7563A48A1F0253B500FB6EBB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				7563A4941F0253B500FB6EBB /* LaunchScreen.storyboard */,
 				7563A4971F0253B500FB6EBB /* Info.plist */,
 				7563A48F1F0253B500FB6EBB /* CoreDataTest.xcdatamodeld */,
+				750BC1F71F03AEC3007E0C38 /* UIViewController+CodeKamp.swift */,
 			);
 			path = CoreDataTest;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			files = (
 				7563A48B1F0253B500FB6EBB /* ViewController.swift in Sources */,
 				7563A4911F0253B500FB6EBB /* CoreDataTest.xcdatamodeld in Sources */,
+				750BC1F81F03AEC3007E0C38 /* UIViewController+CodeKamp.swift in Sources */,
 				7563A4891F0253B500FB6EBB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,6 +307,7 @@
 				7563A49C1F0253B500FB6EBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -88,6 +88,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
+    
+//    func fetch(_ request: NSFetchRequest<NSFetchRequestResult>) throws -> [Any] {
+//        let context = persistentContainer.viewContext
+//        return try context.fetch(request)
+//    }
+    
+    class func shared() -> AppDelegate {
+        return UIApplication.shared.delegate as! AppDelegate
+    }
 }
 
