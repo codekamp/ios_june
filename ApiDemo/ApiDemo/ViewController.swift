@@ -14,26 +14,42 @@ import SwiftyJSON
 class ViewController: UIViewController, UITableViewDataSource {
     
     
+    var handleListFetch:(([MailChimpList]) -> Void)?
+    
+    
     @IBOutlet weak var tableView: UITableView!
     
-    var lists:[MailChimpList] = []
+    var lists:[MailChimpList] = [] {
+        
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.dataSource = self
         
-        MailChimpService.getLists {
+        handleListFetch = {
+            [weak self]
             (lists) in
             
-            self.lists = lists
-            
-            self.tableView.reloadData()
+            self?.lists = lists
         }
+        
+        MailChimpService.getLists(completionHandler: handleListFetch!)
         
         NotificationCenter.default.addObserver(self, selector: #selector(onListFetched), name: NSNotification.Name("LIST_FETCHED"), object: nil)
         
         NotificationCenter.default.removeObserver(self)
+        
+        
+        let s = UIStoryboard(name: "Main", bundle: nil)
+        
+        let vc = s.instantiateViewController(withIdentifier: "something")
+        
+        present(vc, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

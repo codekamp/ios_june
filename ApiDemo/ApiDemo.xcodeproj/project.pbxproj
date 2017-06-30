@@ -15,6 +15,7 @@
 		75014D091EF2775900FA155F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75014D071EF2775900FA155F /* LaunchScreen.storyboard */; };
 		7563A45B1F02440B00FB6EBB /* MembersPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7563A45A1F02440B00FB6EBB /* MembersPageViewController.swift */; };
 		7563A45D1F02453700FB6EBB /* MembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7563A45C1F02453700FB6EBB /* MembersViewController.swift */; };
+		75934B051F0641950000E035 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75934B041F0641950000E035 /* Dog.swift */; };
 		75FC721A1EFA5E4100D14E3D /* MailChimpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FC72191EFA5E4100D14E3D /* MailChimpService.swift */; };
 		75FC721C1EFA5EA200D14E3D /* MailChimpList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FC721B1EFA5EA200D14E3D /* MailChimpList.swift */; };
 		75FC721E1EFA6C1500D14E3D /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FC721D1EFA6C1500D14E3D /* Member.swift */; };
@@ -32,6 +33,7 @@
 		75014D0A1EF2775900FA155F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7563A45A1F02440B00FB6EBB /* MembersPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembersPageViewController.swift; sourceTree = "<group>"; };
 		7563A45C1F02453700FB6EBB /* MembersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembersViewController.swift; sourceTree = "<group>"; };
+		75934B041F0641950000E035 /* Dog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
 		75FC72191EFA5E4100D14E3D /* MailChimpService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailChimpService.swift; sourceTree = "<group>"; };
 		75FC721B1EFA5EA200D14E3D /* MailChimpList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailChimpList.swift; sourceTree = "<group>"; };
 		75FC721D1EFA6C1500D14E3D /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 		75014CF21EF2775900FA155F = {
 			isa = PBXGroup;
 			children = (
+				75934B041F0641950000E035 /* Dog.swift */,
 				75014CFD1EF2775900FA155F /* ApiDemo */,
 				75014CFC1EF2775900FA155F /* Products */,
 				8027916795F75B62D8725236 /* Pods */,
@@ -232,6 +235,7 @@
 				7563A45D1F02453700FB6EBB /* MembersViewController.swift in Sources */,
 				75014CFF1EF2775900FA155F /* AppDelegate.swift in Sources */,
 				75FC721E1EFA6C1500D14E3D /* Member.swift in Sources */,
+				75934B051F0641950000E035 /* Dog.swift in Sources */,
 				7563A45B1F02440B00FB6EBB /* MembersPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
