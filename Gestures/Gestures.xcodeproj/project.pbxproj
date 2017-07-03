@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7516779A1F0A36F600A7864B /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751677991F0A36F600A7864B /* Student.swift */; };
+		7516779C1F0A3A0A00A7864B /* EngineeringStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7516779B1F0A3A0A00A7864B /* EngineeringStudent.swift */; };
+		7516779E1F0A439A00A7864B /* MyRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7516779D1F0A439A00A7864B /* MyRatingView.swift */; };
 		75B123591F04F8D600511AEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B123581F04F8D600511AEF /* AppDelegate.swift */; };
 		75B1235B1F04F8D600511AEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B1235A1F04F8D600511AEF /* ViewController.swift */; };
 		75B1235E1F04F8D600511AEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75B1235C1F04F8D600511AEF /* Main.storyboard */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		751677991F0A36F600A7864B /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		7516779B1F0A3A0A00A7864B /* EngineeringStudent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EngineeringStudent.swift; sourceTree = "<group>"; };
+		7516779D1F0A439A00A7864B /* MyRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyRatingView.swift; sourceTree = "<group>"; };
 		75B123551F04F8D600511AEF /* Gestures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gestures.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75B123581F04F8D600511AEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75B1235A1F04F8D600511AEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +69,9 @@
 				75B123641F04F8D600511AEF /* LaunchScreen.storyboard */,
 				75B123671F04F8D600511AEF /* Info.plist */,
 				75B1235F1F04F8D600511AEF /* Gestures.xcdatamodeld */,
+				751677991F0A36F600A7864B /* Student.swift */,
+				7516779B1F0A3A0A00A7864B /* EngineeringStudent.swift */,
+				7516779D1F0A439A00A7864B /* MyRatingView.swift */,
 			);
 			path = Gestures;
 			sourceTree = "<group>";
@@ -140,8 +149,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				75B1235B1F04F8D600511AEF /* ViewController.swift in Sources */,
+				7516779C1F0A3A0A00A7864B /* EngineeringStudent.swift in Sources */,
+				7516779A1F0A36F600A7864B /* Student.swift in Sources */,
 				75B123611F04F8D600511AEF /* Gestures.xcdatamodeld in Sources */,
 				75B123591F04F8D600511AEF /* AppDelegate.swift in Sources */,
+				7516779E1F0A439A00A7864B /* MyRatingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +315,7 @@
 				75B1236C1F04F8D600511AEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

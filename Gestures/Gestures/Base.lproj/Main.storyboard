@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,28 +21,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nZc-2h-z2L">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nZc-2h-z2L">
                                 <rect key="frame" x="67" y="269" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.21923049489999999" blue="0.18458677540000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ffr-s1-b3h">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ffr-s1-b3h">
                                 <rect key="frame" x="140" y="86" width="94" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Change Color"/>
                                 <connections>
                                     <action selector="changeColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XZT-2R-OYX"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="EzW-p6-7rI">
+                                <rect key="frame" x="146" y="165" width="121" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstItem="nZc-2h-z2L" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="249" id="7ZN-ht-2gA"/>
-                            <constraint firstItem="Ffr-s1-b3h" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="66" id="Kv9-vA-nXj"/>
-                            <constraint firstItem="nZc-2h-z2L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b6E-dc-tCJ"/>
-                            <constraint firstItem="Ffr-s1-b3h" firstAttribute="centerX" secondItem="nZc-2h-z2L" secondAttribute="centerX" id="dGd-rh-CmE"/>
-                            <constraint firstItem="nZc-2h-z2L" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="k8e-ek-eyo"/>
-                            <constraint firstItem="nZc-2h-z2L" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="xIn-Yk-QXP"/>
-                        </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="otM-FE-ryD" appends="YES" id="1bx-nG-2fa"/>
                         </connections>
@@ -59,6 +60,7 @@
                     </connections>
                 </pinchGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>
