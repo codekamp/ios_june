@@ -36,6 +36,8 @@ class ViewController: UIViewController, UITableViewDataSource {
             (lists) in
             
             self?.lists = lists
+            
+            
         }
         
         MailChimpService.getLists(completionHandler: handleListFetch!)
